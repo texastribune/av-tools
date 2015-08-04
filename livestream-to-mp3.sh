@@ -47,4 +47,4 @@ ffmpeg -i out.wav -f mp3 output.mp3
 rm livestream.mp4
 rm livestream.wav
 rm out.wav
-rm output.mp3
+#rm output.mp3
