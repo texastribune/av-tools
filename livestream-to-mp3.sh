@@ -41,7 +41,7 @@ ffmpeg -i out.wav -f mp3 output.mp3
 
 # log in to SoundCloud with "sc auth" prior to running the script - 1 time
 
-sc output.mp3
+#sc output.mp3
 
 # clean up:
 rm livestream.mp4
