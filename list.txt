@@ -1,2 +1,0 @@
-file './intro.wav'
-file './l2.wav'
