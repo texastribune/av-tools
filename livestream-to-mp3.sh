@@ -32,8 +32,8 @@ set -o allexport
 youtube-dl -o livestream.mp4 $1
 # convert to audio:
 ffmpeg -i livestream.mp4 livestream.wav
-# convert the livestream to 44100 sampling rate:
-sox livestream.wav -r 44100 l2.wav
+# convert the livestream to 44100 sampling rate, 1 channel and 16 bits:
+sox livestream.wav -b 16 -c 1 -r 44100 l2.wav
 # combine the intro and the livestream:
 ffmpeg -f concat -i list.txt -c copy out.wav
 # convert the WAV to an mp3:
