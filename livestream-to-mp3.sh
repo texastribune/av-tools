@@ -5,7 +5,7 @@
 
 #### prerequisites ####
 # install the following:
-# pip install soundcloud-cli youtube-dl
+# pip install youtube-dl
 # brew install sox ffmpeg OR apt-get install -y sox ffmpeg
 
 # put the intro file in this directory (named intro.wav)
