@@ -35,16 +35,11 @@ ffmpeg -i livestream.mp4 livestream.wav
 # convert the livestream to 44100 sampling rate, 1 channel and 16 bits:
 sox livestream.wav -b 16 -c 1 -r 44100 l2.wav
 # combine the intro and the livestream:
-ffmpeg -f concat -i list.txt -c copy out.wav
+# sox seems to work better than ffmpeg at this:
+sox intro.wav l2.wav out.wav
+##ffmpeg -f concat -i list.txt -c copy out.wav
 # convert the WAV to an mp3:
 ffmpeg -i out.wav -f mp3 output.mp3
 
-# log in to SoundCloud with "sc auth" prior to running the script - 1 time
-
-#sc output.mp3
-
 # clean up:
-rm livestream.mp4
-rm livestream.wav
-rm out.wav
-#rm output.mp3
+rm livestream.mp4 livestream.wav l2.wav out.wav
